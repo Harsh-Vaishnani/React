@@ -1,0 +1,76 @@
+
+.best-selling {
+    width: 100%;
+    min-height: 400px;
+}
+
+
+.book-div-heading h1 {
+    text-align: start;
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+    margin-block: 20px;
+}
+
+.book-div-heading h1::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: #2bb187;
+    width: 50%;
+    border-radius: 5px;
+    top: 115%;
+    left: 8%;
+}
+
+.book-card-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.book-card {
+    height: 300px;
+    width: 200px;
+    background-color: var(--bgcolor1);
+    border-radius: 18px;
+    margin-top: 100px;
+    box-shadow: 0 5px 4px rgb(211, 211, 211);
+    transition: all 0.2s ease-in;
+}
+
+
+.book-price::before {
+    content: '₹';
+}
+
+
+.book-card:hover {
+    transform: scale(0.98);
+}
+
+.book-card .book-img {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    justify-content: center;
+    padding: 5px;
+    transform: translateY(-50%);
+
+}
+
+.book-img img {
+    height: 100%;
+    width: auto;
+}
+
+.book-disc {
+    height: 200px;
+    gap: 7px;
+    padding: 10px;
+    flex-direction: column;
+    margin-top: -100px;
+    justify-content: space-around;
+}

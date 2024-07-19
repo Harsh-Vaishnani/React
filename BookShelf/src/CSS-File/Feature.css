@@ -1,0 +1,26 @@
+.feature-content {
+    min-height: 100px;
+    width: 100%;
+}
+
+.feature-item {
+    width: 30%;
+    background-color: rgb(221 215 232 / 73%);
+    border-radius: 10px;
+    min-height: 125px;
+    padding: 15px;
+}
+
+.feature-item-text h4 {
+    text-align: start;
+}
+
+.feature-img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+}
+
+.feature-img img {
+    width: 70px;
+}

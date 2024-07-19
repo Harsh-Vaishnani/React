@@ -1,0 +1,47 @@
+
+
+.hero-section {
+  width: 100%;
+  min-height: 500px;
+  justify-content: center;
+  background-color: var(--bgcolor1);
+  /* background-image: -webkit-linear-gradient(264deg, #ecedf1 71%, #fff 29%); */
+  background-image: linear-gradient(#e7e7e7, #ecedf1, #fff);
+}
+
+.hero-content {
+  padding-bottom: 80px;
+}
+
+.hero-img {
+  width: 46%;
+  padding: 50px;
+}
+
+.hero-text {
+  width: 46%;
+  padding: 50px;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.hero-text-head,
+.hero-text-dis span {
+  font-size: 20px;
+  color: var(--greencolor);
+}
+
+.hero-text button {
+  background-image: url("/public/image/btn1\ copy.png");
+  background-size: 100% 100%;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  width: fit-content;
+  padding: 15px 40px 15px 70px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  font-family: cursive, system-ui, sans-serif;
+}

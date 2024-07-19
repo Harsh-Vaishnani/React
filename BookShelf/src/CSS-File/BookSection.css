@@ -1,0 +1,19 @@
+.all-time-book-section {
+    background-color: var(--bgcolor1);
+    margin-block: var(--margin-block-main);
+
+}
+
+.book-card-c-text {
+    width: 25%;
+    padding: 20px;
+    padding-left: 50px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.book-card-c-items {
+    width: 75%;
+    padding: 2px;
+}

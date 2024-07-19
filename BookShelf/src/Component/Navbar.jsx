@@ -1,5 +1,6 @@
 import React from "react";
 import "../CSS-File/Navbar.css";
+import "../CSS-File/Common.css"
 import Serch from "../Images/icons8-search-100.png"
 import Cross from "../Images/icons8-multiply-90.png"
 import Camera from "../Images/camera.png"
