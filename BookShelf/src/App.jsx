@@ -10,7 +10,7 @@ import OfferSection from "./Component/OfferSection";
 import BookSection from "./Component/BookSection";
 import Review from "./Component/Review";
 import Offer from "./Component/Offer";
-import Footer from "./Component/Footer"
+import Footer from "./Component/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,12 +21,11 @@ function App() {
       <Hero />
       <Feature />
       <BestSelling />
-      <OfferSection/>
-      <BookSection/>
-      <Review/>
-      <Offer/>
-      
-      <Footer/>
+      <OfferSection />
+      <BookSection />
+      <Review />
+      <Offer />
+      <Footer />
     </>
   );
 }

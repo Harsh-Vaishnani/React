@@ -15,7 +15,7 @@ function Footer() {
                 width="50px"
                 height="50px"
               />
-              <p style="margin: 0;">
+              <p style={{margin:"0px"}}>
                 Subscribe to get Updates of Book on email
               </p>
             </div>
@@ -49,7 +49,7 @@ function Footer() {
               <h2>BookShelf</h2>
             </div>
             <div>
-              <p style="font-size: 16px;">visit our offline store</p>
+              <p style={{fontSize:"17px"}}>visit our offline store</p>
             </div>
             <div>
               <h4>
