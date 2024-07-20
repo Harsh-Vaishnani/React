@@ -1,0 +1,67 @@
+.review-row {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.review-row::-webkit-scrollbar {
+  width: 3px;
+  margin: 0 30%;
+  height: 3px;
+}
+
+.review-row::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.review-row::-webkit-scrollbar-thumb {
+  background: #888;
+  width: 50%;
+}
+
+.review-row::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.review-column {
+  min-width: 80%;
+  min-height: 250px;
+  margin: 150px 10% 100px 10%;
+  position: relative;
+  background-color: #dedede;
+  border-radius: 37px;
+  padding: 15px;
+  scroll-snap-align: center;
+  /* box-shadow: 0 0 15px rgb(0 0 0 / 10%); */
+}
+
+.review-img {
+  height: 130px;
+  padding: 5px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 130px;
+}
+
+.review-img img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.review-text {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.cust-name {
+  padding: 15px 0;
+}
+
+.cust-name span {
+  color: #2bb187;
+  font-size: 20px;
+}

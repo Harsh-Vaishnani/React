@@ -1,0 +1,100 @@
+
+.footer {
+    background-color: white;
+}
+
+.top-footer {
+    width: 100%;
+    padding-block: 0;
+    min-height: 200px;
+    justify-content: flex-start;
+}
+
+.subscribe {
+    width: 60%;
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+.subscribe-head {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.subscribe-inp {
+    width: 100%;
+    padding: 20px;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.inp-div {
+    height: 50px;
+    padding: 7px 5px;
+    flex: auto;
+}
+
+.form-inp {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1rem;
+    padding-left: 10px;
+    background-color: #fff;
+}
+
+.bottom-footer p,
+.bottom-footer a {
+    font-size: 14px;
+    color: var(--secondary-text-color)
+}
+
+.bottom-footer a:hover {
+    color: var(--primary-text-color);
+}
+
+.bottom-footer {
+    justify-content: space-between;
+    /* padding-bottom: 150px; */
+    align-items: flex-start;
+}
+
+.footer-col-1 {
+    width: 28%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.footer-col-2 {
+    width: 41%;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.footer-col-2-1,
+.footer-col-2-2 {
+    width: calc(50% - 5px);
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.footer-col-3 {
+    width: 27%;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.copywrite {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 20px 40px;
+
+}
+
+.copywrite a {
+    padding: 0 15px;
+}

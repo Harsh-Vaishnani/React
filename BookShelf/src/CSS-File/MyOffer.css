@@ -1,0 +1,68 @@
+.offer {
+  width: 100%;
+}
+
+.offer-container {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offer-container h3,
+.offer-container h2 {
+  text-align: left;
+  color: #000;
+}
+
+.offer-container .row-1 {
+  width: 100%;
+  gap: 10px;
+  height: 300px;
+  color: white;
+}
+
+.offer-banner-1,
+.offer-banner-2 {
+  width: calc(50% - 5px);
+  height: 300px;
+  padding: 20px;
+  background-image: linear-gradient(
+      rgb(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0)
+    ),
+    url("/public/image/offer-baner-1.jpg");
+  background-size: cover;
+  background-position: center;
+  /* border-image: fill 0 linear-gradient(#0001,rgba(0, 0, 0, 0.548)); */
+}
+
+.offer-banner-2 {
+  background-image: url("/public/image/offer-banner-2.jpg");
+}
+
+.offer-container .row-2 {
+  width: 100%;
+  gap: 7px;
+}
+
+.offer-banner-3,
+.offer-banner-4,
+.offer-banner-5 {
+  width: calc(33.33% - 5px);
+  height: 200px;
+  padding: 20px;
+  background-image: url("/public/image/offer-banner-3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.offer-banner-4 {
+  background-image: linear-gradient(
+      rgb(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("/public/image/offer-banner-4.jpg");
+}
+
+.offer-banner-5 {
+  background-image: url("/public/image/offer-baner-1.jpg");
+}

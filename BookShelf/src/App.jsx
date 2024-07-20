@@ -8,6 +8,9 @@ import Feature from "./Component/Feature";
 import BestSelling from "./Component/BestSelling";
 import OfferSection from "./Component/OfferSection";
 import BookSection from "./Component/BookSection";
+import Review from "./Component/Review";
+import Offer from "./Component/Offer";
+import Footer from "./Component/Footer"
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +23,10 @@ function App() {
       <BestSelling />
       <OfferSection/>
       <BookSection/>
+      <Review/>
+      <Offer/>
+      
+      <Footer/>
     </>
   );
 }
