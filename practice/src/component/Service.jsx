@@ -51,7 +51,7 @@ function Service() {
             <span
               style={{
                 position: "absolute",
-                right: "19%",
+                right: "28%",
                 color: "#1AACEF",
                 fontWeight: "700",
               }}
@@ -81,7 +81,7 @@ function Service() {
             <span
               style={{
                 position: "absolute",
-                right: "15%",
+                right: "17%",
                 color: "#1AACEF",
                 fontWeight: "700",
               }}
@@ -111,7 +111,7 @@ function Service() {
             <span
               style={{
                 position: "absolute",
-                right: "9%",
+                right: "3%",
                 color: "#1AACEF",
                 fontWeight: "700",
               }}
