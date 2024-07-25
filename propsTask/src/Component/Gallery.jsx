@@ -3,7 +3,7 @@ import Common from "./Common";
 function Gallery() {
   return (
     <>
-      <h1 className="bg-dark text-white text-center p-3">Notable Scientists</h1>
+      <h1 className="bg-dark text-white text-center p-3 ">Notable Scientists</h1>
 
       <div className="row w-100">
         <div className="col-6">

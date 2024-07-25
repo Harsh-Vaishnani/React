@@ -14,3 +14,20 @@ li {
 b {
   font-size: 17px;
 }
+.avatar{
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 4px;
+}
+.profile{
+  transition: all 0.5s linear;
+  cursor: zoom-in;
+}
+.profile:hover{
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
