@@ -13,7 +13,7 @@ function CommonCard({ img, product, descri, catagory, price }) {
         </div>
         <div className="second">
           <h2>Product Name :- {product}</h2>
-          <h4>Product Price :- {price}</h4>
+          <h2>Product Price :- {price}</h2>
           <p>Product Description :- {descri}</p>
         </div>
       </div>

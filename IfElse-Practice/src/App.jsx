@@ -1,4 +1,4 @@
-import Card from "./Card";
+// import Card from "./Card";
 import Conditional from "./Components/Conditional";
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Conditional />
-      <Card/>
+      {/* <Card/> */}
     </>
   );
 }

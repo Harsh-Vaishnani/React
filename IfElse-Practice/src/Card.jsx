@@ -1,43 +1,52 @@
 import CommonCard from "./Components/CommonCard";
 
+
 function Card() {
-  return (
-    <>
+  const user=prompt("Serch catagory")
+  const users=user.toLocaleLowerCase();
+    
+  if(users==="women"){
+    return<>
       <CommonCard
-        img={"https://m.media-amazon.com/images/I/612WOnKLLML._SY695_.jpg"}
-        product="Side Black Sling Bags"
-        price=" ₹199"
-        descri="Leatherette material black colored Sling bag , Material: 100% Leatherette"
-        catagory="Women"
-      />
-      <CommonCard
-        img={"https://m.media-amazon.com/images/I/61QXyxuQxxL._SX625_.jpg"}
-        product="Platinum Plated Cubic Bracelet"
-        price="₹275"
-        descri="Stylish platinum plated crystal bracelet for women and girls , This latest design bracelet for girls is made from high quality imported austrian crystal. Five layer silver plated."
-        catagory="Women"
-      />
-      <CommonCard
-        img={"https://m.media-amazon.com/images/I/51-+SFrhYFL._SX695_.jpg"}
-        product="Fargo Bags "
-        price="₹499"
-        descri="Package Content: One Handbag, One Sling Bag, Two Makeup Pouch, One Cardholder , Age Range Description: Adult"
-        catagory="Women"
-      />
-      <CommonCard
-        img={"https://m.media-amazon.com/images/I/610-2b7UFBL._SY625_.jpg"}
-        product="GIVA 925 Silver Princess Earrings"
-        price="₹1749"
-        descri="GIVA helps you flaunt your sparkle with style , Inspired by romance and poetry, Fine jewellery is crafted for the modern Indian Women."
-        catagory="Women"
-      />
-      <CommonCard
-        img={"https://m.media-amazon.com/images/I/817iC5Eq49L._SX679_.jpg"}
-        product="SSS Plated Women's Watch "
-        price="₹399"
-        descri="Strap Width: 10 mm , Band material type is Stainless Steel Silver Plated"
-        catagory="Women"
-      />
+          img={"https://m.media-amazon.com/images/I/612WOnKLLML._SY695_.jpg"}
+          product="Side Black Sling Bags"
+          price=" ₹199"
+          descri="Leatherette material black colored Sling bag , Material: 100% Leatherette"
+          catagory="Women"
+        />
+        <CommonCard
+          img={"https://m.media-amazon.com/images/I/61QXyxuQxxL._SX625_.jpg"}
+          product="Platinum Plated Cubic Bracelet"
+          price="₹275"
+          descri="Stylish platinum plated crystal bracelet for women and girls , This latest design bracelet for girls is made from high quality imported austrian crystal. Five layer silver plated."
+          catagory="Women"
+        />
+        <CommonCard
+          img={"https://m.media-amazon.com/images/I/51-+SFrhYFL._SX695_.jpg"}
+          product="Fargo Bags "
+          price="₹499"
+          descri="Package Content: One Handbag, One Sling Bag, Two Makeup Pouch, One Cardholder , Age Range Description: Adult"
+          catagory="Women"
+        />
+        <CommonCard
+          img={"https://m.media-amazon.com/images/I/610-2b7UFBL._SY625_.jpg"}
+          product="GIVA 925 Silver Princess Earrings"
+          price="₹1749"
+          descri="GIVA helps you flaunt your sparkle with style , Inspired by romance and poetry, Fine jewellery is crafted for the modern Indian Women."
+          catagory="Women"
+        />
+        <CommonCard
+          img={"https://m.media-amazon.com/images/I/817iC5Eq49L._SX679_.jpg"}
+          product="SSS Plated Women's Watch "
+          price="₹399"
+          descri="Strap Width: 10 mm , Band material type is Stainless Steel Silver Plated"
+          catagory="Women"
+        />
+    </>
+  }
+  else if(users==="men"){
+    return<>
+      
       <CommonCard
         img={"https://m.media-amazon.com/images/I/71mj0YhDGiL._SX569_.jpg"}
         product="Short Sleeve T-Shirt"
@@ -75,7 +84,7 @@ function Card() {
         catagory="Men"
       />
     </>
-  );
+  }
 }
 
 export default Card;
