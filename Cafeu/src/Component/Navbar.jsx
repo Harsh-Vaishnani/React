@@ -6,7 +6,7 @@ import "./CommonCss/Common.css";
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg p-3">
+      <nav className="navbar navbar-expand-lg  p-3">
         <div className="container">
           <div>
             <a className="navbar-brand" href="#">
