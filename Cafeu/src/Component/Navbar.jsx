@@ -1,10 +1,12 @@
 import logo from "../../public/Images/logo.png";
 import call from "../../public/Images/call.png";
+import { FaSearch } from "react-icons/fa";
+import "./CommonCss/Common.css";
 
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-dark-subtle">
+      <nav className="navbar navbar-expand-lg p-3">
         <div className="container">
           <div>
             <a className="navbar-brand" href="#">
@@ -286,14 +288,35 @@ function Navbar() {
                     </li>
                   </ul>
                 </li>
+                <li
+                  style={{ lineHeight: "40px", fontSize: "16px" }}
+                  className="ps-4"
+                >
+                  <a href="" style={{ color: "#666666" }}>
+                    <FaSearch />
+                  </a>
+                </li>
                 <ul style={{ listStyle: "none", lineHeight: "40px" }}>
                   <li>
                     <img src={call}></img>
                   </li>
                 </ul>
-                <ul style={{ listStyle: "none" ,lineHeight:"40px",paddingLeft:"15px"}}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    lineHeight: "40px",
+                    paddingLeft: "15px",
+                  }}
+                >
                   <li>
-                    <p className="m-0">+880 123 456 789</p>
+                    <p className="m-0">
+                      <a
+                        href=""
+                        style={{ color: "#666666", textDecoration: "none" }}
+                      >
+                        +880 123 456 789
+                      </a>
+                    </p>
                   </li>
                 </ul>
               </ul>
