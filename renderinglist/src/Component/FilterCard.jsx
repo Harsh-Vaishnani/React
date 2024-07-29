@@ -39,14 +39,14 @@ function Product() {
     <div>
       
       <section style={{marginTop:"10%"}}>
-        <h2 style={{textAlign:"center", color: "#333", margin: "20px 0"}}><mark style={{padding:"5px 10px 5px 10px"}}>Men's Clothing</mark></h2>
+        <h2 style={{textAlign:"center", color: "#333", margin: "20px 0"}}><mark style={{padding:"5px 10px 5px 10px"}}> Men's Clothing</mark></h2>
         <ul style={{listStyle:"none",display:"flex",flexWrap:"wrap",justifyContent:"center"}}> 
           {mensClothing.map(renderCard)}
         </ul>
       </section>
 
       <section style={{marginTop:"10%"}}>
-        <h2 style={{textAlign:"center", color: "#333", margin: "20px 0"}}><mark style={{padding:"5px 10px 5px 10px"}}>Women's Clothing</mark></h2>
+        <h2 style={{textAlign:"center", color: "#333", margin: "20px 0"}}><mark style={{padding:"5px 10px 5px 10px"}}> Women's Clothing</mark></h2>
         <ul style={{listStyle:"none",display:"flex",flexWrap:"wrap",justifyContent:"center"}}> 
           {womensClothing.map(renderCard)}
         </ul>
