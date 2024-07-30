@@ -8,7 +8,7 @@ function App() {
     <>
       <Card
         imageName="car1"
-        name=" Challenger SRT"
+        // name=" Challenger SRT"
         hp="717"
         details="Dodge is a renowned American automobile brand known for producing a range of high-performance vehicles, including muscle cars, SUVs, and trucks. Here are some details about notable Dodge Cars."
       />

@@ -1,7 +1,10 @@
 import React from "react";
 import "../Component/CommonCss/Card.css";
 
-function Card({ name, hp, details, imageName }) {
+
+// name="SP=portscar" a default value set kri ch. jyare rendring ma ky error aave tyare set kreli value show thay.
+
+function Card({ name="SportsCar", hp, details, imageName }) {
   // image na path ne props sathe merge krva mate ek variable ma store kravyu
   const imagePath = "/src/assets/Images/" + imageName + ".jpg";
   
