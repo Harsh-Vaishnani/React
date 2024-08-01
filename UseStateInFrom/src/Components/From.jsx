@@ -1,106 +1,132 @@
 import { useState } from "react";
 import "../Components/CSS/Form.css";
 
-function From() {
-  const [formData, setFormData] = useState({
-    firstName: "",
+function Form() {
+  const [Form, setForm] = useState({
+    name: "",
     lastName: "",
     email: "",
     password: "",
     address: "",
   });
 
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ 
-      //  previous state ko spread kr ne ke liye (update kar ne kiye (add kar ne liye))
-      ...prevData,
-      // feild update ke liye
-      [name]: value,
-    }));
+  function handleFirstName(e) {
+    setForm({
+      ...Form,
+      name: e.target.value,
+    });
+  }
+  function handleLastName(e) {
+    setForm({
+      ...Form,
+
+      lastName: e.target.value,
+    });
+  }
+  function handleEmail(e) {
+    setForm({
+      ...Form,
+
+      email: e.target.value,
+    });
+  }
+  function handlePassword(e) {
+    setForm({
+      ...Form,
+
+      password: e.target.value,
+    });
+  }
+  function handleAddress(e) {
+    setForm({
+      ...Form,
+
+      address: e.target.value,
+    });
   }
 
   return (
-    <div className="container mt-5 border border-3 border-black">
-      <form className="form" onSubmit={(e)=>e.preventDefault()}>
-        <div className="form-group">
+    <div className="container mt-5 mb-5 border border-3 border-black p-4 rounded">
+      <form className="form">
+        <div className="form-group mb-3">
           <label>Enter Your First Name:</label>
           <input
             type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
+            value={Form.name}
+            onChange={handleFirstName}
             placeholder="Enter Your First Name"
+            className="form-control"
           />
         </div>
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Enter Your Last Name:</label>
           <input
             type="text"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
+            value={Form.lastName}
+            onChange={handleLastName}
             placeholder="Enter Your Last Name"
+            className="form-control"
           />
         </div>
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Enter Your Email:</label>
           <input
             type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={Form.email}
+            onChange={handleEmail}
             placeholder="Enter Your Email"
+            className="form-control"
           />
         </div>
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Enter Your Password:</label>
           <input
             type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
+            value={Form.password}
+            onChange={handlePassword}
             placeholder="Enter Your Password"
+            className="form-control"
           />
         </div>
-        <div className="form-group">
+        <div className="form-group mb-3">
           <label>Enter Your Address:</label>
           <textarea
-            name="address"
             placeholder="Enter Your Address"
-            value={formData.address}
-            onChange={handleChange}
+            value={Form.address}
+            onChange={handleAddress}
+            className="form-control"
           ></textarea>
         </div>
-        <div className="form-group m-auto mb-5">
-          <button type="submit" className="submit-button">
+        <div className="form-group text-center">
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </div>
       </form>
-      <div className="message-box">
+      <div className="message-box mt-5 p-3 border rounded bg-light">
+        <h4 className="text-center mb-3">User Information</h4>
         <p>
-          User Name is: &nbsp;
-          <span className="fw-bold fst-italic text-bg-warning">
-            {formData.firstName} {formData.lastName}
+          <strong>User Name : &nbsp;</strong>
+          <span className="fw-bold fst-italic text-bg-warning  rounded p-0">
+            {Form.name} {Form.lastName}
           </span>
         </p>
         <p>
-          User Email is: &nbsp;
-          <span className="fw-bold fst-italic text-bg-warning">
-            {formData.email}
+          <strong>User Email : &nbsp;</strong>
+          <span className="fw-bold fst-italic text-bg-warning  rounded p-0">
+            {Form.email}
           </span>
         </p>
         <p>
-          User Password is: &nbsp;
-          <span className="fw-bold fst-italic text-bg-warning">
-            {formData.password}
+          <strong>User Password : &nbsp;</strong>
+          <span className="fw-bold fst-italic text-bg-warning  rounded p-0">
+            {Form.password}
           </span>
         </p>
         <p>
-          User Address is : &nbsp;
-          <span className="fw-bold fst-italic text-bg-warning">
-             {formData.address}
+          <strong>User Address : &nbsp;</strong>
+          <span className="fw-bold fst-italic text-bg-warning  rounded p-0">
+            {Form.address}
           </span>
         </p>
       </div>
@@ -108,4 +134,4 @@ function From() {
   );
 }
 
-export default From;
+export default Form;
