@@ -1,0 +1,15 @@
+.card {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.card.slide-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card.slide-out {
+  transform: translateY(-20px);
+  opacity: 0;
+}
