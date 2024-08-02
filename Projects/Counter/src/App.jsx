@@ -5,7 +5,10 @@ function App() {
 
   return (
     <>
+    <h1 className='text-center'>Counter</h1>
       <Counter/> <hr/>
+    <h1 className='text-center'>Card</h1>
+
       <Card/>
     </>
   )

@@ -286,23 +286,18 @@ function Counter() {
   return (
     <>
       <div className="container mt-5 text-center">
-        <button type="button" className="btn btn-success" onClick={increment}>
-          Next
-        </button>
+        <div className="d-flex justify-content-center align-items-center">
+          <button type="button" className="border" style={{fontSize:"30px"}} onClick={decrement}>
+            ◀️
+          </button>
 
-        <button
-          type="button"
-          className="btn btn-warning mx-5"
-          onClick={decrement}
-        >
-          Previous
-        </button>
-      </div>
-      <div className="container mt-5">
-        <div className="row justify-content-center">
-          <div className="col-sm-4">
+          <div className="mx-3">
             <ProductCard product={products[index]} />
           </div>
+
+          <button type="button" className="border" style={{fontSize:"30px"}} onClick={increment}>
+            ▶️
+          </button>
         </div>
       </div>
     </>
