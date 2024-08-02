@@ -7,6 +7,8 @@ function Form() {
     lastName: "",
     email: "",
     password: "",
+    phonenumber: "",
+    dob: "",
     address: "",
   });
 
@@ -37,6 +39,30 @@ function Form() {
       password: e.target.value,
     });
   }
+  function handlePhoneNumber(e) {
+    setForm({
+      ...Form,
+
+      phonenumber: e.target.value,
+    });
+  }
+  function handleDoB(e) {
+    setForm({
+      ...Form,
+
+      dob: e.target.value,
+    });
+  }
+
+  function handleGender(e) {
+    setForm({
+      ...Form,
+
+      gender: e.target.value,
+    });
+  }
+
+
   function handleAddress(e) {
     setForm({
       ...Form,
@@ -89,6 +115,42 @@ function Form() {
           />
         </div>
         <div className="form-group mb-3">
+          <label>Enter Your Phone Number:</label>
+          <input
+            type="number"
+            value={Form.phonenumber}
+            onChange={handlePhoneNumber}
+            placeholder="Enter Your Phone Number"
+            className="form-control"
+          />
+        </div>
+        <div className="form-group mb-3">
+          <label>Enter Your Date Of Birth:</label>
+          <input
+            type="date"
+            value={Form.dob}
+            onChange={handleDoB}
+            placeholder="Enter Your Date Of Birth"
+            className="form-control"
+          />
+        </div>
+
+        <div className="form-group mb-3">
+          <label>Choose Your Gender:</label>
+          <select
+            name="Gender"
+            id="gender"
+            onChange={handleGender}
+            value={Form.gender}
+          >
+            <option>Choose Your Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="trans">Trans</option>
+          </select>
+        </div>
+
+        <div className="form-group mb-3">
           <label>Enter Your Address:</label>
           <textarea
             placeholder="Enter Your Address"
@@ -121,6 +183,24 @@ function Form() {
           <strong>User Password : &nbsp;</strong>
           <span className="fw-bold fst-italic text-bg-warning  rounded p-0">
             {Form.password}
+          </span>
+        </p>
+        <p>
+          <strong>User Phone Number : &nbsp;</strong>
+          <span className="fw-bold fst-italic text-bg-warning  rounded p-0">
+            {Form.phonenumber}
+          </span>
+        </p>
+        <p>
+          <strong>User Date Of Birth : &nbsp;</strong>
+          <span className="fw-bold fst-italic text-bg-warning  rounded p-0">
+            {Form.dob}
+          </span>
+        </p>
+        <p>
+          <strong>User Gender is : &nbsp;</strong>
+          <span className="fw-bold fst-italic text-bg-warning  rounded p-0">
+            {Form.gender}
           </span>
         </p>
         <p>
