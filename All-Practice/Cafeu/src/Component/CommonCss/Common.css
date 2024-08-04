@@ -1,16 +1,36 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-hr{
-    margin: 0;
+hr {
+  margin: 0;
 }
-.navbar{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.navbar {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-li{
-    color: #666666;
-    font-size: 17px;
-    font-family: sans-serif;
+li {
+  color: #666666;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+@keyframes fadeRed {
+  0% {
+    box-shadow: 0 0 0 0 rgb(214, 11, 11);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(139, 0, 0, 0.211);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 0, 0, 0.211);
+
+
+  }
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after , .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'next';
+    color: rgba(0, 0, 0, 0.244);
+    font-weight: 600;
 }
