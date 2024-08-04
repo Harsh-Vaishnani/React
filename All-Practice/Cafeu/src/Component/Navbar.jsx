@@ -3,6 +3,7 @@ import call from "../../public/Images/call.png";
 import { FaSearch } from "react-icons/fa";
 import "./CommonCss/Common.css";
 
+
 function Navbar() {
   return (
     <>

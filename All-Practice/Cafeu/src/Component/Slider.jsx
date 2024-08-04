@@ -1,7 +1,6 @@
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "./CommonCss/Common.css";
-
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -10,9 +9,45 @@ import slider2 from "../../public/Images/baner2.png";
 import slider3 from "../../public/Images/baner3.png";
 
 import { Navigation, Autoplay } from "swiper/modules";
+
+const DarkLightToggle = ({ toggleMode, mode }) => (
+  <div
+    style={{ width: "auto" }}
+    className="text-center me-3 justify-content-end d-flex"
+  >
+    <a href="#" style={{ textDecoration: "none" }} onClick={toggleMode}>
+      {mode === "dark" && <h3 className="m-0">🔅</h3>}
+      {mode === "light" && <h3 className="m-0">🔆</h3>}
+      {mode === "blue" && <h3 className="m-0">🔵</h3>}
+      {mode === "sepia" && <h3 className="m-0">🟤</h3>}
+    </a>
+  </div>
+);
+
 function Slider() {
+  const [mode, setMode] = useState("light");
+
+  const toggleMode = (newMode) => {
+    setMode(newMode);
+
+    // Remove all mode classes
+    document.body.classList.remove(
+      "dark-mode",
+      "light-mode",
+      "blue-mode",
+      "sepia-mode"
+    );
+    // Add new mode class
+    document.body.classList.add(`${newMode}-mode`);
+  };
+
   return (
     <>
+      <DarkLightToggle toggleMode={() => toggleMode("dark")} mode={mode} />
+      <DarkLightToggle toggleMode={() => toggleMode("light")} mode={mode} />
+      <DarkLightToggle toggleMode={() => toggleMode("blue")} mode={mode} />
+      <DarkLightToggle toggleMode={() => toggleMode("sepia")} mode={mode} />
+
       <Swiper
         navigation={true}
         modules={[Navigation, Autoplay]}
@@ -47,8 +82,7 @@ function Slider() {
                   <a href="" className="fw-bolder" style={{ color: "#c33" }}>
                     Salad
                   </a>{" "}
-                  <br />
-                  With Creamy Avocado
+                  <br /> With Creamy Avocado
                 </h1>
                 <p className="mb-5">
                   Lorem ipsum dolor sit amet, conscetur adipiscing elit, sed do
@@ -90,7 +124,7 @@ function Slider() {
                 </div>
               </div>
             </div>
-            <img src={slider1} />
+            <img src={slider1} alt="Slider 1" />
           </div>
         </SwiperSlide>
 
@@ -160,7 +194,7 @@ function Slider() {
                 </div>
               </div>
             </div>
-            <img src={slider2} />
+            <img src={slider2} alt="Slider 2" />
           </div>
         </SwiperSlide>
 
@@ -186,9 +220,9 @@ function Slider() {
                 >
                   Different &nbsp;
                   <a href="" className="fw-bolder" style={{ color: "#c33" }}>
-                   Spice 
+                    Spice
                   </a>{" "}
-                  For <br/> A Different Taste
+                  For <br /> A Different Taste
                 </h1>
                 <p className="mb-5">
                   Lorem ipsum dolor sit amet, conscetur adipiscing elit, sed do
@@ -230,7 +264,7 @@ function Slider() {
                 </div>
               </div>
             </div>
-            <img src={slider3} />
+            <img src={slider3} alt="Slider 3" />
           </div>
         </SwiperSlide>
       </Swiper>
