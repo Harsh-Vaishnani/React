@@ -15,12 +15,12 @@ const DarkLightToggle = ({ toggleMode, mode }) => (
     style={{ width: "auto" }}
     className="text-center me-3 justify-content-end d-flex"
   >
-    <a href="#" style={{ textDecoration: "none" }} onClick={toggleMode}>
+    {/* <a href="#" style={{ textDecoration: "none" }} onClick={toggleMode}>
       {mode === "dark" && <h3 className="m-0">🔅</h3>}
       {mode === "light" && <h3 className="m-0">🔆</h3>}
       {mode === "blue" && <h3 className="m-0">🔵</h3>}
       {mode === "sepia" && <h3 className="m-0">🟤</h3>}
-    </a>
+    </a> */}
   </div>
 );
 
