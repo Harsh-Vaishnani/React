@@ -1,0 +1,11 @@
+.functionalheader{
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: brown;
+    color: white;
+    /* border: 1px solid brown; */
+}
+
+.functionalheader button{
+    margin: 10px;
+}

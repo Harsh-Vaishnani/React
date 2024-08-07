@@ -1,0 +1,33 @@
+
+
+.header{
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: brown;
+    color: white;
+    /* border: 1px solid brown; */
+}
+
+.header button{
+    margin: 10px;
+}
+
+.functionalheader2{
+    margin-top: 50px;
+    padding: 10px 0;
+    color: white;
+    background-color: brown;
+    /* border: 1px solid red; */
+}
+.functionalheader2 input{
+    margin-top: 10px;
+    outline: none;
+}
+
+.greeting{
+    margin: 20px;
+}
+
+.hook h1{
+ margin: 15px 0;
+}

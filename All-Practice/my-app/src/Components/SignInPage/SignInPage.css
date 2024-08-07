@@ -1,0 +1,104 @@
+
+.page{
+    
+    height: 585px;
+    background-image: linear-gradient(to right,blue,rgb(0, 183, 255));
+    padding-top: 60px;
+  
+ }
+ 
+.box{
+    margin: 0px auto;
+    padding: 1px;
+    background-color: white;
+    max-width: 500px; 
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+   
+}
+
+.heading p{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    /* border: 1px solid red; */
+    
+}
+
+
+.inputmenu input[type=text]{
+    width: 400px;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 5px; 
+    border: 2px solid rgba(128, 128, 128, 0.486);
+    outline: none;
+  
+}
+.inputmenu input[type=password]{
+    width: 400px;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(128, 128, 128, 0.486);
+    outline: none;
+    
+}
+.inputmenu input[type=checkbox]{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: 2px solid gray;
+    outline: none;
+    
+}
+.button{
+    width: 400px;
+    margin: 40px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+
+
+.inputmenu input:hover{
+    border: 2px solid rgba(4, 41, 248, 0.877); 
+}
+.inputPassword{
+    margin: auto;
+    width: 425px;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.fa-eye{
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+.blue{
+    color: blue;
+}
+
+.check{
+    font-size: 15px;
+    margin: 50px auto;
+    color: red;
+}
+.check1{
+    font-size: 15px;
+    margin: 50px auto;
+    color: green;
+}
+  

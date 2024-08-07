@@ -1,0 +1,24 @@
+.height{
+    height: 180px;
+   
+}
+
+.flex{
+    max-width: 400px;
+    /* border: 1px solid red; */
+    margin: 10px auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex input{
+    height: 30px;
+    outline: none;
+    text-align: center;
+}
+
+.span{
+    text-transform: uppercase;
+    color: red;
+}

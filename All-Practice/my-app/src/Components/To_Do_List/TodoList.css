@@ -1,0 +1,136 @@
+
+
+.background{
+    padding: 50px;
+    height: 545px;
+    background-color: blueviolet;
+    /* background-color: rgb(226, 43, 43); */
+}
+
+.todolist{
+    margin: 34px auto 0px auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    min-height: 400px;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.368);
+    /* border: 1px solid red; */
+}
+.todolist h1{
+    background-color: violet;
+    color: white;
+    
+}
+.todolist input {
+    
+    width: 100%;
+   outline: none;
+   border: none;
+  background-color: transparent;
+   max-width: 300px;
+   height: 35px ;
+   padding-left: 10px;
+   font-size: 15px;
+   font-weight: 500;
+   border-bottom: 2px solid violet;
+}
+
+.input-area{
+    /* border: 1px solid red; */
+    margin: 15px auto;
+    max-width: 350px;
+    display: flex;
+    justify-content: space-around;
+}
+.add_button:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+ol{
+    
+    margin-top: 20px;
+    list-style: none;
+    /* border: 1px solid black; */
+    padding: 10px;
+  
+   
+}
+
+ li{
+    
+    /* border: 1px solid red;    */
+    text-align: left;
+    font-size: 20px;
+    color: violet;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 10px 10px;
+   
+
+}
+
+.Li_items{
+    align-items: center;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons{
+    /* border: 1px solid red; */
+    width: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.check-icon{
+    color: violet;
+    font-size: 35px;
+}
+.check-icon:hover{
+    color: blue;
+    cursor: pointer;
+}
+.add-icon{
+    color: violet;
+    font-size: 35px;
+}
+.add-icon:hover{
+    color: green;
+    cursor: pointer;
+}
+
+.icon{
+   
+    font-size: 20px;
+    color: violet  ;
+}
+.icon:hover{
+    color: red;
+    cursor: pointer;
+}
+.icon-blue:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.remove-button{
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px !important;
+    border-radius: 10px;
+    background-color: violet;
+}
+
+.remove-button:hover{
+    cursor: pointer;
+    background-color: red !important;
+}
