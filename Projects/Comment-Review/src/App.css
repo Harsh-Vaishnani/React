@@ -1,0 +1,14 @@
+.firstInput{
+height: 35px;
+}
+.addItem{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    /* border-radius: 30px; */
+    background-color: violet;
+}
+.addItem>a{
+    text-decoration: none;
+    color: black;
+}
