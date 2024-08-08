@@ -6,9 +6,17 @@ height: 35px;
     height: 35px;
     text-align: center;
     /* border-radius: 30px; */
-    background-color: violet;
+    background-color: #F7C7DB;
 }
 .addItem>a{
     text-decoration: none;
     color: black;
+}
+::placeholder{
+    color: #E8ECD6;
+}
+
+.main {
+    border: solid 1.5em rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
