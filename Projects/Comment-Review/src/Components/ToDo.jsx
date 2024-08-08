@@ -52,7 +52,7 @@ function ToDo() {
           style={{ backgroundColor: "#E8ECD6" }}
         >
           <h1 className=" p-2 text-center mb-4" style={{ color: "#31473A" }}>
-            To Do List 📃
+            To Do List 📝
           </h1>
           <div>
             <div className="d-flex px-3 pb-4 justify-content-center">
