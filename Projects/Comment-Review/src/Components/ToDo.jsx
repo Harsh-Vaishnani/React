@@ -52,13 +52,13 @@ function ToDo() {
           style={{ backgroundColor: "#E8ECD6" }}
         >
           <h1 className=" p-2 text-center mb-4" style={{ color: "#31473A" }}>
-            To Do List
+            To Do List 📃
           </h1>
           <div>
             <div className="d-flex px-3 pb-4 justify-content-center">
               <input
                 type="text"
-                placeholder="Add Item"
+                placeholder="Add Item . . . "
                 className="firstInput rounded-3 ps-3 me-5 w-75 fs-5"
                 value={inputValue}
                 style={{ backgroundColor: "#31473A", color: "#E8ECD6" }}
