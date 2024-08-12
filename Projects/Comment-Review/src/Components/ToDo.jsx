@@ -35,12 +35,13 @@ function ToDo() {
 
   const editItem = (index) => {
     setInputValue(items[index]);
-    setIsEditing(true);
     setEditIndex(index);
   };
 
+  //For Delete Item 
   const deleteItem = (index) => {
-    const updatedItems = items.filter((_, itemIndex) => itemIndex !== index);
+    const updatedItems = [...items]; //Spread Operator ka Use
+    updatedItems.splice(index, 1);
     setItems(updatedItems);
   };
 
@@ -74,7 +75,7 @@ function ToDo() {
             </div>
           </div>
           <div className="text-white">
-            <ul style={{paddingLeft:"10%"}}>
+            <ul style={{ paddingLeft: "10%" }}>
               {items.map((item, index) => (
                 <li
                   key={index}
