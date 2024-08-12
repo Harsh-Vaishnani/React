@@ -13,12 +13,11 @@ p {
   align-items: center;
   flex-wrap: wrap;
 }
-.card{
+/* .card{
   height: 600px !important;
-}
+} */
 .product-card {
-  width: 300px;
-  height: 500px;
+  width: 500px !important;
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 10px;

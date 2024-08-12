@@ -16,7 +16,7 @@ function Counter() {
 
   return (
     <>
-      <div className="container mt-5 text-center">
+      <div className="container mt-5 text-center w-50">
         <button type="button" className="btn btn-success" onClick={increment}>
           Increment
         </button>
