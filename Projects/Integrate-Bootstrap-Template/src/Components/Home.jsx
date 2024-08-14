@@ -11,7 +11,7 @@ function Home() {
         const data = await response.json();
         setProducts(data.products);
       } catch (error) {
-        console.log("Error fetching products 🥺", error);
+        console.log("Error fetching products", error);
       }
     }
 
