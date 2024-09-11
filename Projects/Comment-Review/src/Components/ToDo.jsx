@@ -38,7 +38,7 @@ function ToDo() {
     setEditIndex(index);
   };
 
-  //For Delete Item 
+  //For Delete Item
   const deleteItem = (index) => {
     const updatedItems = [...items]; //Spread Operator ka Use
     updatedItems.splice(index, 1);
