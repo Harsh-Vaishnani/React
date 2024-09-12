@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
 
 function ToDo() {
   const [inputValue, setInputValue] = useState("");
@@ -9,24 +8,23 @@ function ToDo() {
   const [isEditing, setIsEditing] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
 
-  const navigate = useNavigate();
-  const location = useLocation();
-
   useEffect(() => {
     localStorage.setItem("todoItems", JSON.stringify(items));
   }, [items]);
 
   useEffect(() => {
-    if (location.state?.itemToEdit !== undefined) {
-      setInputValue(location.state.itemToEdit);
-      setEditIndex(location.state.indexToEdit);
+    const savedState = JSON.parse(localStorage.getItem("todoEditState")) || {};
+
+    if (savedState.itemToEdit !== undefined) {
+      setInputValue(savedState.itemToEdit);
+      setEditIndex(savedState.indexToEdit);
       setIsEditing(true);
     }
 
-    if (location.state?.updatedItems) {
-      setItems(location.state.updatedItems);
+    if (savedState.updatedItems) {
+      setItems(savedState.updatedItems);
     }
-  }, [location.state]);
+  }, []);
 
   const addItem = () => {
     if (inputValue.trim() === "") {
@@ -50,7 +48,9 @@ function ToDo() {
   };
 
   const handleCartClick = () => {
-    navigate("/cart", { state: { items } });
+    localStorage.setItem("cartItems", JSON.stringify(items));
+
+    window.location.href = "/cart"; 
   };
 
   return (
@@ -59,9 +59,26 @@ function ToDo() {
         className="w-75 m-auto mt-5 rounded-5 p-4 main"
         style={{ backgroundColor: "#E8ECD6" }}
       >
-        <div className="d-flex justify-content-end m-0">
+        <div className="d-flex justify-content-end m-0 position-relative">
           <h2 style={{ cursor: "pointer" }} onClick={handleCartClick}>
             🛒
+            {items.length > 0 && (
+              <span
+                className="badge"
+                style={{
+                  position: "absolute",
+                  top: "-10px",
+                  right: "-10px",
+                  backgroundColor: "#FF6F61",
+                  color: "#fff",
+                  borderRadius: "50%",
+                  padding: "5px 10px",
+                  fontSize: "14px",
+                }}
+              >
+                {items.length}
+              </span>
+            )}
           </h2>
         </div>
         <h1 className="p-2 text-center mb-4" style={{ color: "#31473A" }}>
