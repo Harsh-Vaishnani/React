@@ -8,6 +8,23 @@ function Preview() {
     setItems(storedItems);
   }, []);
 
+  const handleDelete = (index) => {
+    const updatedItems = [...items];
+    updatedItems.splice(index, 1); 
+    setItems(updatedItems);
+    localStorage.setItem("todoItems", JSON.stringify(updatedItems)); 
+  };
+
+  const handleEdit = (index) => {
+    const newItem = prompt("Edit item:", items[index]);
+    if (newItem) {
+      const updatedItems = [...items];
+      updatedItems[index] = newItem;
+      setItems(updatedItems);
+      localStorage.setItem("todoItems", JSON.stringify(updatedItems)); 
+    }
+  };
+
   return (
     <div
       className="preview-container w-50 m-auto py-4 mt-4 rounded-4 text-center"
@@ -25,10 +42,16 @@ function Preview() {
                 className="mb-3 pb-2"
                 style={{ borderBottom: "2px solid black" }}
               >
-                <button className="mx-4 btn btn-sm btn-warning ms-2 border border-3 border-black">
+                <button
+                  onClick={() => handleEdit(index)}
+                  className="mx-4 btn btn-sm btn-warning ms-2"
+                >
                   Edit
                 </button>
-                <button className="btn btn-sm btn-danger ms-2 border border-3 border-black">
+                <button
+                  onClick={() => handleDelete(index)}
+                  className="btn btn-sm btn-danger ms-2"
+                >
                   Delete
                 </button>
               </div>

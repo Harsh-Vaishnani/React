@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import './APIData.css'
+import React, { useEffect, useState } from "react";
+import "./APIData.css";
 
 function APIData() {
   const [products, setProducts] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://fakestoreapi.com/products');
+        const response = await fetch("https://fakestoreapi.com/products");
         const data = await response.json();
         setProducts(data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
-    
+
     fetchData();
   }, []);
 

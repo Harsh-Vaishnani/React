@@ -26,7 +26,6 @@
   outline: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   border: 3px solid black;
-
 }
 
 .search-input:focus {
@@ -51,7 +50,6 @@
   margin: auto;
   margin-bottom: 2%;
   border: 3px solid black;
-
 }
 
 .product-item:hover {
