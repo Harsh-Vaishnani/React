@@ -77,27 +77,28 @@
 
 // export default App;
 
+
+
+
+
+
 import React, { useState } from "react";
 
 function App() {
   const [text, setText] = useState("");
+  const [submit , setSubmit] = useState("");
 
   return (
     <>
       <form action="" className="container mt-5">
-        <input
-          type="text"
-          placeholder="Enter the Name"
-          className="w-50"
-          style={{ textTransform: text }}
+        <input  type="text" placeholder="Enter the Name" className="w-50" style={{ textTransform: text }}
+        value={submit} onChange={(e)=>setSubmit(e.target.value)}
         />
         <br />
         <button
           type="button"
           className="bg-success text-white mt-4"
-          onClick={() => {
-            setText("");
-          }}
+         onClick={()=>{setSubmit(submit)}}
         >
           Submit
         </button>
@@ -120,7 +121,7 @@ function App() {
           Lower Case
         </button>
       </form>
-      <h2 className="container mt-5">hello</h2>
+      <h2 className="container mt-5">{submit}</h2>
     </>
   );
 }

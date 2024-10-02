@@ -1,99 +1,83 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
-function LogIn() {
-  // State to manage theme
-  const [lightMode, setLightMode] = useState(false);
+function Login({ setUser }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
-  // Function to toggle light mode
-  const toggleMode = () => {
-    setLightMode(!lightMode);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+      .get("http://localhost:4040/api")
+      .then((response) => {
+        const users = response.data;
+        const user = users.find(
+          (user) => user.email === email && user.password === password
+        );
+
+        if (user) {
+          setUser(user);
+          setMessage("Login Successful!");
+          navigate("/");
+        } else {
+          alert("Please Sign Up First");
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching users:", error);
+        setMessage("Error fetching user data.");
+      });
   };
 
-  // Inline styles based on theme
-  const themeStyles = {
-    backgroundColor: lightMode ? "#f8f9fa" : "#212529", // Light gray for light mode, dark gray for dark mode
-    color: lightMode ? "#000" : "#fff", // Black text for light mode, white text for dark mode
-    borderColor: lightMode ? "#000" : "#fff", // Black border for light mode, white border for dark mode
+  const handleSignUpRedirect = () => {
+    navigate("/signup");
   };
 
   return (
-    <>
-      <h2 className="text-center mt-4">LogIn</h2>
-      <button 
-        onClick={toggleMode}  
-        style={{ left: "90%", top: "5%", position: "absolute" }}
-      >
-        {lightMode ? "Dark Mode" : "Light Mode"}
-      </button>
-      <form
-        className="container mt-5 border border-4 rounded-4 w-50 py-4"
-        style={{
-          backgroundColor: themeStyles.backgroundColor,
-          color: themeStyles.color,
-          borderColor: themeStyles.borderColor, // Border color based on theme
-          boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-        }}
-      >
-        <div className="mb-4 m-auto" style={{ width: "80%" }}>
-          <label
-            htmlFor="exampleInputEmail1"
-            className="form-label fs-4 fw-medium"
-            style={{ color: themeStyles.color }}
-          >
-            Email address
-          </label>
+    <div className="login-container">
+      <h1 className="login-title">Login</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">Email</label>
           <input
             type="email"
-            className="form-control border border-2 rounded-3"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            style={{
-              backgroundColor: themeStyles.backgroundColor,
-              color: themeStyles.color,
-              borderColor: themeStyles.borderColor,
-            }}
+            className="form-input"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
-          <div
-            id="emailHelp"
-            className="form-text fst-italic"
-            style={{ color: themeStyles.color }}
-          >
-            We'll never share your email with anyone else.
-          </div>
         </div>
-        <div className="mb-4 m-auto" style={{ width: "80%" }}>
-          <label
-            htmlFor="exampleInputPassword1"
-            className="form-label fs-4 fw-medium"
-            style={{ color: themeStyles.color }}
-          >
-            Password
-          </label>
+        <div className="form-group">
+          <label htmlFor="password" className="form-label">Password</label>
           <input
             type="password"
-            className="form-control border border-2 rounded-3"
-            id="exampleInputPassword1"
-            style={{
-              backgroundColor: themeStyles.backgroundColor,
-              color: themeStyles.color,
-              borderColor: themeStyles.borderColor,
-            }}
+            className="form-input"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
           />
         </div>
-        <button
-          type="submit"
-          className="btn m-auto justify-content-center d-block"
-          style={{
-            backgroundColor: themeStyles.backgroundColor,
-            color: themeStyles.color,
-            borderColor: themeStyles.borderColor,
-          }}
-        >
-          Submit
-        </button>
+        <div className="button-group">
+          <button className="login-button" type="submit">Login</button>
+          <button
+            className="signup-button"
+            type="button"
+            onClick={handleSignUpRedirect}
+          >
+            Sign Up
+          </button>
+        </div>
+        {message && <p className="message">{message}</p>}
       </form>
-    </>
+    </div>
   );
 }
 
-export default LogIn;
+export default Login;
