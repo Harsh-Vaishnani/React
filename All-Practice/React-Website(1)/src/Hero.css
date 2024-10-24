@@ -1,0 +1,161 @@
+.hero-section {
+    height: 86vh;
+    margin-top: 6.5%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bg-img-1,
+  .bg-img-2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    z-index: -999;
+    opacity: 0.8;
+  }
+  
+  .bg-img-1 {
+    background-image: url("../Images/bgimg-1.png");
+  }
+  
+  .bg-img-2 {
+    background-image: url("../Images/bgimg-2.png");
+    left: 93.6%;
+  }
+  
+  /* Text Section */
+  .hero-welcome {
+    color: #fe4142;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .hero-heading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 72px;
+  }
+  
+  .highlight-blue {
+    color: #03a4ed;
+    padding-left: 15px;
+  }
+  
+  .highlight-red {
+    color: #fe3f40;
+    padding-left: 15px;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: oblique;
+  }
+  
+  /* Button Styling */
+  .hero-main-btn {
+    width: 60%;
+    background-color: #03a4ed;
+    border: none;
+    height: 65px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-inner-btn {
+    width: 50%;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    background-color: white;
+  }
+  
+  .hero-inner-btn p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #fe3f40;
+    letter-spacing: 1px;
+  }
+  
+  /* Image Section */
+  .hero-img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 992px) {
+    .hero-heading {
+      font-size: 40px;
+      line-height: 58px;
+    }
+  
+    .hero-description {
+      font-size: 14px;
+    }
+  
+    .hero-main-btn {
+      width: 70%;
+      height: 55px;
+    }
+  
+    .hero-inner-btn {
+      width: 60%;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-heading {
+      font-size: 35px;
+      line-height: 52px;
+    }
+  
+    .hero-description {
+      font-size: 13px;
+    }
+  
+    .hero-main-btn {
+      width: 80%;
+      height: 50px;
+    }
+  
+    .hero-inner-btn {
+      width: 65%;
+      padding: 8px 18px;
+    }
+  
+    .hero-img {
+      max-width: 350px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .hero-heading {
+      font-size: 28px;
+      line-height: 45px;
+    }
+  
+    .hero-description {
+      font-size: 12px;
+    }
+  
+    .hero-main-btn {
+      width: 90%;
+      height: 45px;
+    }
+  
+    .hero-inner-btn {
+      width: 70%;
+      padding: 8px 15px;
+    }
+  
+    .hero-img {
+      max-width: 300px;
+    }
+  }
+  
